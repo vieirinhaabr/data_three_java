@@ -1,4 +1,4 @@
-package three_java;
+package tree_java;
 
 public class Main {
 
