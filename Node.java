@@ -1,26 +1,27 @@
-package arvore;
-public class Node {
-  Node esquerdaNode;
-  int info;
-  Node direitaNode;
+package three_java;
 
-  public Node(int nodeInfo){
-    info = nodeInfo;
-    esquerdaNode = direitaNode = null;
+public class Node {
+  Node leftNode;
+  int data;
+  Node rightNode;
+
+  public Node(int nodedata){
+    data = nodedata;
+    leftNode = rightNode = null;
   }
 
-  public void insereNode(int insertValue){
-    if (insertValue < info){
-      if (esquerdaNode == null)
-       esquerdaNode = new Node(insertValue);
+  public void insertNode(int insertValue){
+    if (insertValue < data){
+      if (leftNode == null)
+       leftNode = new Node(insertValue);
       else
-       esquerdaNode.insereNode(insertValue);
+       leftNode.insertNode(insertValue);
     }
-    else if (insertValue > info){
-      if (direitaNode == null)
-	direitaNode = new Node(insertValue);
+    else if (insertValue > data){
+      if (rightNode == null)
+	rightNode = new Node(insertValue);
       else
-	direitaNode.insereNode(insertValue);
+	rightNode.insertNode(insertValue);
     }
   }
 }
